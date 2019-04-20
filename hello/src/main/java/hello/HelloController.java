@@ -21,10 +21,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //Esta bandera significa que la clase está lista para ser usada por Spring
+//para lidiar con solicitudes web
 @RestController
 public class HelloController{
 	
 	@RequestMapping("/")
+	//la etiqueta mapea el / al método index()
+	//Cuando se invoca desde un navegador o usa curl en la línea de comando, el método devuelve texto puro.
 	public String index() {
 		return "Saludos de las botas de Spring, perros";
 	}
